@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>Git & GitHub Mastery - Beginner Visual Guide</title>
+    <link rel="stylesheet" href="git.css" />
+  </head>
+  <body>
+    <!-- ── NAVBAR ── -->
+    <header class="navbar">
+      <div class="logo">
+        <span class="git-icon">🐙</span> Git & GitHub Primer
+      </div>
+      <p class="subtitle">
+        Master Version Control with HTML, CSS, & JavaScript
+      </p>
+    </header>
+
+    <main class="container">
+      <!-- ── SECTION 1: VCS & DVCS FUNDAMENTALS ── -->
+      <section class="info-section">
+        <h2>1. What is Version Control System (VCS)?</h2>
+        <p class="section-intro">
+          A <strong>Version Control System (VCS)</strong> is a smart "time
+          machine" for your project code. It tracks every change made over time
+          so you can review history, restore old files, and collaborate with
+          others without overwriting code.
+        </p>
+
+        <div class="comparison-grid">
+          <div class="info-card">
+            <span class="card-badge badge-warning">Old Way</span>
+            <h3>Centralized VCS (CVCS)</h3>
+            <p><strong>Examples:</strong> Subversion (SVN), Perforce</p>
+            <p>
+              A single central server holds the entire project history.
+              Developers check out files from this central server.
+            </p>
+            <ul class="card-list">
+              <li>
+                ❌ <strong>Single Point of Failure:</strong> If the central
+                server crashes, nobody can commit or view history.
+              </li>
+              <li>
+                ❌ <strong>Requires Internet:</strong> You cannot save snapshots
+                offline.
+              </li>
+            </ul>
+          </div>
+
+          <div class="info-card highlight-card">
+            <span class="card-badge badge-success">Modern Standard</span>
+            <h3>Distributed VCS (DVCS)</h3>
+            <p><strong>Examples:</strong> Git, Mercurial</p>
+            <p>
+              Every developer clones a <strong>full copy</strong> of the entire
+              repository history onto their local computer.
+            </p>
+            <ul class="card-list">
+              <li>
+                ✅ <strong>Works Offline:</strong> You can stage, commit, and
+                view history without internet.
+              </li>
+              <li>
+                ✅ <strong>Full Redundancy:</strong> Every team member has a
+                full backup of the whole project.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Git vs GitHub vs GitLab -->
+        <div class="breakdown-box">
+          <h3>Understanding Git vs. GitHub vs. GitLab</h3>
+          <div class="breakdown-grid">
+            <div class="breakdown-item">
+              <h4>🔧 Git</h4>
+              <p>
+                The <strong>local CLI tool</strong> installed on your computer
+                that tracks changes and saves commit snapshots on your hard
+                drive.
+              </p>
+            </div>
+            <div class="breakdown-item">
+              <h4>octocat GitHub</h4>
+              <p>
+                A <strong>cloud hosting platform</strong> for Git repositories.
+                Adds social collaboration, PRs (Pull Requests), issues, and team
+                access.
+              </p>
+            </div>
+            <div class="breakdown-item">
+              <h4>🦊 GitLab</h4>
+              <p>
+                An alternative <strong>cloud platform & DevOps tool</strong> for
+                Git repositories, popular for self-hosted enterprise pipelines
+                (CI/CD).
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SECTION 2: FIRST-TIME SETUP & REMOTE SETUP ── -->
+      <section class="info-section">
+        <h2>2. First-Time Setup & Remote Connection</h2>
+        <p class="section-intro">
+          Before committing code, you must introduce yourself to Git locally and
+          link your local project to a cloud repository on GitHub.
+        </p>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">Step 1</div>
+            <h3>Configure Identity</h3>
+            <p>
+              Tell Git who you are so your name is attached to every commit
+              snapshot.
+            </p>
+            <pre
+              class="code-block"
+            ><code>git config --global user.name "Your Name"
+git config --global user.email "you@example.com"</code></pre>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">Step 2</div>
+            <h3>Initialize Local Repo</h3>
+            <p>Turn any local folder into a Git-monitored repository.</p>
+            <pre class="code-block"><code>cd my-project-folder
+git init
+git branch -M main</code></pre>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">Step 3</div>
+            <h3>Connect to GitHub</h3>
+            <p>
+              Link your local repository to a fresh cloud repository created on
+              GitHub.
+            </p>
+            <pre
+              class="code-block"
+            ><code>git remote add origin https://github.com/user/repo.git
+git push -u origin main</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SECTION 3: INTERACTIVE WORKFLOW STAGE ── -->
+      <section class="stage-section" aria-label="Git Workflow Visualizer">
+        <h2>3. The Interactive Git Workflow Stage</h2>
+        <div class="workflow-grid">
+          <!-- Working Directory -->
+          <div class="stage-card" id="workingDir">
+            <div class="card-header">
+              <h3>1. Working Directory</h3>
+              <span class="badge status-working">Untracked / Modified</span>
+            </div>
+            <p class="card-desc">
+              Your actual local workspace where you edit HTML, CSS, and JS
+              files.
+            </p>
+            <ul class="file-list" id="workingFiles">
+              <!-- Dynamic Files Injected Here -->
+            </ul>
+          </div>
+
+          <!-- Staging Area -->
+          <div class="stage-card" id="stagingArea">
+            <div class="card-header">
+              <h3>2. Staging Area</h3>
+              <span class="badge status-staged">Staged</span>
+            </div>
+            <p class="card-desc">
+              The "loading dock" where you select which changes to include in
+              the next commit snapshot.
+            </p>
+            <ul class="file-list" id="stagedFiles">
+              <li class="empty-msg">No files staged yet...</li>
+            </ul>
+          </div>
+
+          <!-- Local Repository -->
+          <div class="stage-card" id="localRepo">
+            <div class="card-header">
+              <h3>3. Local Repository</h3>
+              <span class="badge status-committed">Committed</span>
+            </div>
+            <p class="card-desc">
+              Permanent snapshots saved safely in your local
+              <code>.git</code> folder.
+            </p>
+            <div class="commit-history" id="commitHistory">
+              <div class="commit-node initial">
+                <span class="commit-hash">init</span>
+                <span class="commit-msg">Initial commit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SECTION 4: INTERACTIVE TERMINAL SIMULATOR ── -->
+      <section class="control-section" aria-label="Git Terminal">
+        <h2>4. Terminal Commands Simulator</h2>
+
+        <div class="terminal-container">
+          <div class="terminal-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="term-title">bash — git-demo</span>
+          </div>
+
+          <div class="terminal-body">
+            <div class="command-buttons">
+              <button class="btn btn-cmd" id="btnTouch">
+                <code>touch newfile.js</code>
+              </button>
+
+              <button class="btn btn-cmd" id="btnStatus">
+                <code>git status</code>
+              </button>
+
+              <button class="btn btn-cmd" id="btnAdd">
+                <code>git add .</code>
+              </button>
+
+              <button class="btn btn-cmd" id="btnCommit">
+                <code>git commit -m "update"</code>
+              </button>
+
+              <button class="btn btn-cmd" id="btnPush">
+                <code>git push origin main</code>
+              </button>
+
+              <button class="btn btn-danger" id="btnReset">
+                <code>git reset --hard</code>
+              </button>
+            </div>
+
+            <div class="terminal-output" id="termOutput">
+              <p class="line prompt">
+                $ Welcome! Click any command button above to simulate how Git
+                processes changes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SECTION 5: THE 80/20 RULE GLOSSARY ── -->
+      <section class="info-section">
+        <h2>5. The 80/20 Rule: Most Used Git Commands</h2>
+        <p class="section-intro">
+          In daily professional development, you will use
+          <strong>20% of Git commands 80% of the time</strong>. Master these
+          core commands first!
+        </p>
+
+        <div class="glossary-grid">
+          <div class="glossary-card">
+            <code>git init</code>
+            <p>
+              Initializes a new empty Git repository inside your current folder.
+            </p>
+          </div>
+
+          <div class="glossary-card">
+            <code>git status</code>
+            <p>
+              Shows the state of your working directory and staging area
+              (modified, untracked, or staged files).
+            </p>
+          </div>
+
+          <div class="glossary-card">
+            <code>git add &lt;file&gt;</code>
+            <p>
+              Moves changes from the working directory to the staging area. Use
+              <code>git add .</code> for all files.
+            </p>
+          </div>
+
+          <div class="glossary-card">
+            <code>git commit -m "msg"</code>
+            <p>
+              Saves staged changes as a permanent snapshot in your local
+              repository with a message.
+            </p>
+          </div>
+
+          <div class="glossary-card">
+            <code>git log --oneline</code>
+            <p>
+              Displays a list of all past commit snapshots in chronological
+              order.
+            </p>
+          </div>
+
+          <div class="glossary-card">
+            <code>git push origin main</code>
+            <p>
+              Uploads local commits from your machine to the remote GitHub
+              repository.
+            </p>
+          </div>
+
+          <div class="glossary-card">
+            <code>git pull origin main</code>
+            <p>
+              Fetches and merges latest changes from GitHub down to your local
+              computer.
+            </p>
+          </div>
+
+          <div class="glossary-card">
+            <code>git clone &lt;url&gt;</code>
+            <p>
+              Downloads an existing GitHub repository onto your local computer.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <script src="git.js"></script>
+  </body>
+</html>

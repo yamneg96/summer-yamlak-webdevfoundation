@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>Course 3: Version Control Mastery Notes</title>
+    <link rel="stylesheet" href="git.css" />
+  </head>
+  <body>
+    <!-- ── NAVBAR ── -->
+    <header class="navbar">
+      <div class="logo"><span class="git-icon">📚</span> Course 3: Version Control</div>
+      <p class="subtitle">Complete Beginner Course Syllabus & Command Reference</p>
+    </header>
+
+    <main class="container">
+
+      <!-- ── MODULE 1: SOFTWARE COLLABORATION ── -->
+      <section class="info-section">
+        <h2>Module 1: Software Collaboration & VCS Foundations</h2>
+        <p class="section-intro">
+          <strong>Version Control</strong> is a system that records all changes and modifications to files over time for tracking, safety, and team collaboration.
+        </p>
+
+        <!-- Benefits Grid -->
+        <h3>Core Benefits of Version Control</h3>
+        <div class="breakdown-grid" style="margin-bottom: 24px;">
+          <div class="breakdown-item">
+            <h4>📜 Revision History</h4>
+            <p>Keeps a chronological log of all changes. If something breaks, you can instantly revert back to a working snapshot.</p>
+          </div>
+          <div class="breakdown-item">
+            <h4>👤 Identity Tracking</h4>
+            <p>Links every single commit to the specific author's name and email, making code auditing and communication seamless.</p>
+          </div>
+          <div class="breakdown-item">
+            <h4>🤝 Team Collaboration</h4>
+            <p>Allows multiple developers to work concurrently on the same codebase without overwriting each other's work.</p>
+          </div>
+          <div class="breakdown-item">
+            <h4>⚙️ Automation & CI</h4>
+            <p>Triggers automated test suites, build compilers, and security checks on every code submission.</p>
+          </div>
+          <div class="breakdown-item">
+            <h4>⚡ Team Efficiency</h4>
+            <p>Empowers developers to experiment boldly on isolated branches knowing they can safely rollback if needed.</p>
+          </div>
+        </div>
+
+        <!-- Methodologies & Ecosystems -->
+        <div class="comparison-grid">
+          <div class="info-card">
+            <h3>Agile Methodology</h3>
+            <p>A software development practice centered around iterative progress, small deliverables, continuous feedback, and rapid releases.</p>
+          </div>
+          <div class="info-card">
+            <h3>DevOps Culture</h3>
+            <p>Combines <strong>Development (Dev)</strong> and <strong>IT Operations (Ops)</strong> to accelerate code delivery speed while maintaining system stability and security.</p>
+          </div>
+        </div>
+
+        <!-- History Timeline -->
+        <h3 style="margin-top: 24px; margin-bottom: 12px;">Evolution & History of Version Control</h3>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">1986 / 1990</div>
+            <h3>CVS (Concurrent Versions System)</h3>
+            <p>Created by Walter F. Tichy. Tracked files using folders, but lacked integrity checks—corrupting partial uploads and failing on binary files.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">2000</div>
+            <h3>Subversion (SVN) & BitKeeper</h3>
+            <p>SVN solved CVS integrity bugs and binary handling using a <em>Centralized (CVCS)</em> architecture. BitKeeper pioneered early DVCS concepts for Linux.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">2005 - Present</div>
+            <h3>Git & Mercurial Revolution</h3>
+            <p>When BitKeeper revoked Linux's free license, Linus Torvalds created <strong>Git</strong> and Olivia Mackall created <strong>Mercurial</strong>—popularizing Distributed VCS.</p>
+          </div>
+        </div>
+
+        <!-- Staging vs Production & CI/CD Pipeline -->
+        <h3 style="margin-top: 24px; margin-bottom: 12px;">CI/CD Pipelines & Deployment Environments</h3>
+        <div class="breakdown-box">
+          <div class="breakdown-grid">
+            <div class="breakdown-item">
+              <h4>🔄 Continuous Integration (CI)</h4>
+              <p>Automatically compiles code and runs unit/integration test suites on every pull request to catch bugs early.</p>
+            </div>
+            <div class="breakdown-item">
+              <h4>📦 Continuous Delivery (CD)</h4>
+              <p>Automatically packages build artifacts and staging builds after successful CI passes, preparing them for deployment.</p>
+            </div>
+            <div class="breakdown-item">
+              <h4>🧪 Staging Environment</h4>
+              <p>A replica server matching Production used by QA for testing features, data migrations, and configuration updates.</p>
+            </div>
+            <div class="breakdown-item">
+              <h4>🚀 Production Environment</h4>
+              <p>The live server environment where real end-users interact with your application.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ── MODULE 2: COMMAND LINE & UNIX MASTERY ── -->
+      <section class="info-section">
+        <h2>Module 2: CLI & Unix Essentials</h2>
+        <p class="section-intro">
+          Mastering terminal commands is essential for performing version control operations efficiently.
+        </p>
+
+        <!-- Command Table -->
+        <div class="breakdown-box" style="margin-bottom: 20px;">
+          <h3>Core Unix Terminal Commands</h3>
+          <div class="glossary-grid" style="margin-top: 12px;">
+            <div class="glossary-card"><code>pwd</code><p>Print Working Directory: displays full path to current folder.</p></div>
+            <div class="glossary-card"><code>ls -la</code><p>Lists all files including hidden ones (starting with <code>.</code>) in detailed list layout.</p></div>
+            <div class="glossary-card"><code>cd path/to/dir</code><p>Change Directory to specified target location.</p></div>
+            <div class="glossary-card"><code>mkdir -p dir1/dir2</code><p>Makes directories recursively including parent folders.</p></div>
+            <div class="glossary-card"><code>touch index.html</code><p>Creates a empty new file of any specified extension.</p></div>
+            <div class="glossary-card"><code>cp source dest</code><p>Copies files or directories from origin to destination.</p></div>
+            <div class="glossary-card"><code>mv source dest</code><p>Moves or renames files and directories.</p></div>
+            <div class="glossary-card"><code>cat file.txt</code><p>Reads out or concatenates file content to standard output.</p></div>
+            <div class="glossary-card"><code>less file.txt</code><p>Opens file contents paginated for easy reading.</p></div>
+            <div class="glossary-card"><code>history</code><p>Prints out recent commands executed in terminal session.</p></div>
+            <div class="glossary-card"><code>man &lt;command&gt;</code><p>Displays technical manual page for a command (e.g., <code>man ls</code>).</p></div>
+            <div class="glossary-card"><code>code .</code><p>Opens current workspace directly inside VS Code.</p></div>
+          </div>
+        </div>
+
+        <!-- Unix Permissions Breakdown -->
+        <div class="breakdown-box" style="margin-bottom: 20px;">
+          <h3>Reading <code>ls -l</code> File Prefixes</h3>
+          <div class="breakdown-grid">
+            <div class="breakdown-item">
+              <h4><code>d</code> Prefix</h4>
+              <p>Indicates the line item is a <strong>Directory / Folder</strong>.</p>
+            </div>
+            <div class="breakdown-item">
+              <h4><code>l</code> Prefix</h4>
+              <p>Indicates the item is a <strong>Symlink / Shortcut Link</strong>.</p>
+            </div>
+            <div class="breakdown-item">
+              <h4><code>-</code> Prefix</h4>
+              <p>Indicates the item is a standard <strong>Regular File</strong> (text, image, script).</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pipes, I/O Redirection, GREP & VIM -->
+        <div class="breakdown-box">
+          <h3>Pipes, Redirection, GREP & VIM</h3>
+          <div class="breakdown-grid">
+            <div class="breakdown-item">
+              <h4>| Pipes</h4>
+              <p>Feeds the output of command A into input of command B.<br><code>ls | wc -w</code> or <code>cat file1.txt file2.txt | wc -w</code></p>
+            </div>
+            <div class="breakdown-item">
+              <h4>&lt; &gt; Redirections</h4>
+              <p>
+                <code>0 &lt;</code> Stdin: <code>cat &lt; input.txt</code><br>
+                <code>1 &gt;</code> Stdout: <code>ls -l &gt; output.txt</code><br>
+                <code>2 &gt;</code> Stderr: <code>ls /bin/usr 2&gt; error.txt</code>
+              </p>
+            </div>
+            <div class="breakdown-item">
+              <h4>🔍 GREP Searches</h4>
+              <p>
+                <code>grep Sam names.txt</code> (Partial match)<br>
+                <code>grep -i sam names.txt</code> (Case insensitive)<br>
+                <code>grep -w Sam names.txt</code> (Exact word match)
+              </p>
+            </div>
+            <div class="breakdown-item">
+              <h4>📝 VIM Workflow</h4>
+              <p>
+                1. Press <code>i</code> to enter Edit/Insert mode.<br>
+                2. Write code/script (e.g., <code>#!/bin/bash</code>).<br>
+                3. Press <code>Esc</code> key then type <code>:wq!</code> to write, quit, and save.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ── MODULE 3: GIT & GITHUB WORKFLOWS ── -->
+      <section class="info-section">
+        <h2>Module 3: Git, GitHub, Branching & Conflicts</h2>
+        <p class="section-intro">
+          Deep dive into core Git workflows, remote management, branch controls, and resolving merge conflicts.
+        </p>
+
+        <!-- Authentication -->
+        <div class="comparison-grid">
+          <div class="info-card">
+            <h3>HTTPS Connection</h3>
+            <p>Uses Personal Access Tokens (PATs) for security verification during pushes.</p>
+            <pre class="code-block" style="margin-top: 8px;"><code># PAT Token Format
+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</code></pre>
+          </div>
+
+          <div class="info-card highlight-card">
+            <h3>SSH Key Authentication</h3>
+            <p>Generates asymmetric public/private key pairs locally and uploads the public key to GitHub for passwordless pushes.</p>
+          </div>
+        </div>
+
+        <!-- The 3 States -->
+        <h3 style="margin-top: 24px; margin-bottom: 12px;">The 3 States of Git</h3>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">State 1</div>
+            <h3>Modified (Working Dir)</h3>
+            <p>Files created, deleted, or updated locally. Git recognizes changes but isn't tracking them in a snapshot yet.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">State 2</div>
+            <h3>Staged (Staging Area)</h3>
+            <p>Changes marked using <code>git add</code> to be included in the upcoming snapshot loading dock.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-num">State 3</div>
+            <h3>Committed (Local Repo)</h3>
+            <p>Snapshot permanently written into the hidden local <code>.git</code> database folder using <code>git commit</code>.</p>
+          </div>
+        </div>
+
+        <!-- Branching Commands -->
+        <h3 style="margin-top: 24px; margin-bottom: 12px;">Branch Management & Cleanups</h3>
+        <div class="glossary-grid">
+          <div class="glossary-card"><code>git branch</code><p>Lists all local branches and highlights active branch with asterisk.</p></div>
+          <div class="glossary-card"><code>git branch feature-1</code><p>Creates a new branch named <code>feature-1</code> without switching to it.</p></div>
+          <div class="glossary-card"><code>git checkout feature-1</code><p>Switches your active workspace context to branch <code>feature-1</code>.</p></div>
+          <div class="glossary-card"><code>git checkout -B feature-1</code><p>Creates branch <code>feature-1</code> and immediately checks it out.</p></div>
+          <div class="glossary-card"><code>git branch -m new-name</code><p>Renames the currently checked out local branch to <code>new-name</code>.</p></div>
+          <div class="glossary-card"><code>git push -u origin main</code><p>Pushes local main branch and sets remote origin as upstream source.</p></div>
+          <div class="glossary-card"><code>git remote prune origin</code><p>Deletes stale local tracking branches that no longer exist on GitHub remote.</p></div>
+          <div class="glossary-card"><code>git pull</code><p>Executes <code>git fetch</code> followed by a <code>git merge</code> into current local branch.</p></div>
+        </div>
+
+        <!-- Merge Conflicts & Feature Branching -->
+        <div class="breakdown-box" style="margin-top: 24px;">
+          <h3>Resolving Merge Conflicts & Feature Branching</h3>
+          <div class="breakdown-grid">
+            <div class="breakdown-item">
+              <h4>⚡ Merge Conflicts</h4>
+              <p>Occurs when Git cannot automatically merge conflicting changes (e.g., Developer 1 and Developer 2 edit same lines on <code>Feature.js</code> on separate branches). Resolved manually by picking changes or rebasing.</p>
+            </div>
+            <div class="breakdown-item">
+              <h4>🌿 Feature Branch Workflow</h4>
+              <p>Standard software team practice: isolate individual tasks/bugs on dedicated feature branches before submitting Pull Requests (PRs) into main production.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ── SECTION 4: INTERACTIVE DEMO LINK ── -->
+      <section class="control-section" aria-label="Git Terminal">
+        <h2>Interactive Git Visualizer Playground</h2>
+        <div class="terminal-container">
+          <div class="terminal-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="term-title">bash — interactive-visualizer</span>
+          </div>
+          <div class="terminal-body">
+            <div class="command-buttons">
+              <button class="btn btn-cmd" id="btnTouch">
+                <code>touch newfile.js</code>
+              </button>
+              <button class="btn btn-cmd" id="btnStatus">
+                <code>git status</code>
+              </button>
+              <button class="btn btn-cmd" id="btnAdd">
+                <code>git add .</code>
+              </button>
+              <button class="btn btn-cmd" id="btnCommit">
+                <code>git commit -m "update"</code>
+              </button>
+              <button class="btn btn-cmd" id="btnPush">
+                <code>git push origin main</code>
+              </button>
+              <button class="btn btn-danger" id="btnReset">
+                <code>git reset --hard</code>
+              </button>
+            </div>
+
+            <div class="terminal-output" id="termOutput">
+              <p class="line prompt">
+                $ Terminal active! Click commands above to observe state changes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <script src="git.js"></script>
+  </body>
+</html>
