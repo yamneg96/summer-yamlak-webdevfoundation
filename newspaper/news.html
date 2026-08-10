@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classic Newspaper Website Template — HTML CSS, Print Ready</title>
+    <link href="./news.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- ── MASTHEAD HEADER ── -->
+    <header class="masthead">
+      <div class="masthead-top">
+        <span>Vol. CXLII · No. 49,281</span>
+        <time datetime="2026-03-09">Monday, March 9, 2026</time>
+        <span>Price: $3.50</span>
+      </div>
+      <div class="paper-name">
+        <h1>The Daily Times</h1>
+        <p class="tagline">"All the news that's fit to print"</p>
+      </div>
+      <nav class="section-nav" aria-label="Main Navigation">
+        <a href="#" class="active">Front Page</a>
+        <a href="#">World</a>
+        <a href="#">Politics</a>
+        <a href="#">Business</a>
+        <a href="#">Technology</a>
+        <a href="#">Science</a>
+        <a href="#">Arts</a>
+        <a href="#">Sports</a>
+        <a href="#">Opinion</a>
+      </nav>
+    </header>
+
+    <!-- Breaking News Ticker Band -->
+    <aside class="headline-band" aria-label="Breaking News">
+      Breaking: Global Climate Summit Reaches Historic Agreement on Carbon
+      Emissions
+    </aside>
+
+    <!-- ── MAIN GRID CONTENT ── -->
+    <main class="newspaper-grid">
+      <!-- Left Column / Sidebar -->
+      <aside class="col sidebar-col">
+        <section class="index-box" aria-label="Today's Index">
+          <h4>Today's Index</h4>
+          <dl class="index-list">
+            <div class="index-item">
+              <dt>World News</dt>
+              <dd><span>A4</span></dd>
+            </div>
+            <div class="index-item">
+              <dt>Business</dt>
+              <dd><span>B1</span></dd>
+            </div>
+            <div class="index-item">
+              <dt>Technology</dt>
+              <dd><span>B6</span></dd>
+            </div>
+            <div class="index-item">
+              <dt>Science</dt>
+              <dd><span>C2</span></dd>
+            </div>
+            <div class="index-item">
+              <dt>Opinion</dt>
+              <dd><span>C8</span></dd>
+            </div>
+            <div class="index-item">
+              <dt>Sports</dt>
+              <dd><span>D1</span></dd>
+            </div>
+            <div class="index-item">
+              <dt>Crossword</dt>
+              <dd><span>D9</span></dd>
+            </div>
+          </dl>
+        </section>
+
+        <article class="article">
+          <header>
+            <p class="kicker">Markets</p>
+            <h2 class="headline hl-sm">
+              Stocks Surge as Fed Signals Rate Pause
+            </h2>
+            <p class="byline">By A. Rahman · Financial Desk</p>
+          </header>
+          <p class="body-text">
+            Wall Street closed sharply higher Friday as fresh data pointed to
+            cooling inflation, raising investor hopes that the Federal Reserve's
+            tightening cycle may be nearing its end.
+          </p>
+        </article>
+
+        <article class="article">
+          <header>
+            <p class="kicker">Science</p>
+            <h2 class="headline hl-sm">
+              Astronomers Detect Unusual Radio Signal from Andromeda Galaxy
+            </h2>
+            <p class="byline">By L. Chen · Science Reporter</p>
+          </header>
+          <p class="body-text">
+            An international team of researchers has detected a repeating
+            pattern of radio waves emanating from a region near the galactic
+            core of Andromeda, baffling astronomers.
+          </p>
+        </article>
+      </aside>
+
+      <!-- Center Lead Article Column -->
+      <section class="col center-col">
+        <article class="article feature-article">
+          <header>
+            <p class="kicker">World Exclusive</p>
+            <h2 class="headline hl-xl">
+              Nations Agree to Historic Net-Zero Pact in Geneva Summit
+            </h2>
+            <p class="byline">
+              By Sarah Mitchell, James Okonkwo · Geneva Bureau
+            </p>
+          </header>
+
+          <figure class="img-block" style="height: 220px">
+            <figcaption>
+              [ Photograph: Delegates signing the Geneva Climate Accord ]
+            </figcaption>
+          </figure>
+
+          <p class="deck">
+            Over 180 countries have signed a landmark agreement pledging binding
+            carbon-neutral targets by 2040 — the most ambitious climate deal in
+            history.
+          </p>
+
+          <div class="body-text two-col">
+            <p>
+              In a dramatic turn of events late Thursday evening, delegates from
+              183 nations gathered in the grand hall of the Palais des Nations
+              in Geneva signed what analysts are calling the most consequential
+              environmental accord since the Paris Agreement.
+            </p>
+            <p style="margin-top: 10px">
+              The landmark deal, negotiated over four gruelling days of talks,
+              commits signatories to achieving net-zero carbon emissions by 2040
+              — a decade ahead of previous targets — and establishes a $500
+              billion Green Transition Fund to assist developing nations in
+              retrofitting their energy infrastructure.
+            </p>
+            <p style="margin-top: 10px">
+              "This is the moment the world chose survival over convenience,"
+              said UN Secretary-General in a press briefing that concluded just
+              past midnight local time. Markets responded positively to the
+              news, with green energy stocks surging more than seven percent at
+              opening.
+            </p>
+          </div>
+
+          <blockquote class="pull-quote">
+            <p>
+              "History will mark this day as the turning point — the moment
+              humanity chose a different path."
+            </p>
+            <cite>— UN Secretary-General, Geneva, March 8</cite>
+          </blockquote>
+        </article>
+      </section>
+
+      <!-- Right Column -->
+      <aside class="col right-col">
+        <article class="article">
+          <header>
+            <p class="kicker">Technology</p>
+            <h2 class="headline hl-lg">
+              AI Regulation Bill Passes Senate with Bipartisan Support
+            </h2>
+            <p class="byline">By T. Navarro · Washington Bureau</p>
+          </header>
+
+          <figure class="img-block" style="height: 120px">
+            <figcaption>[ Photo: Senate chamber vote ]</figcaption>
+          </figure>
+
+          <p class="body-text">
+            The Artificial Intelligence Accountability Act passed the Senate
+            78-21 on Wednesday, requiring companies above a certain revenue
+            threshold to submit independent safety audits before deploying
+            large-scale AI systems to the public.
+          </p>
+        </article>
+
+        <article class="article">
+          <header>
+            <p class="kicker">Opinion</p>
+            <h2 class="headline hl-md">The New Geopolitics of Clean Energy</h2>
+            <p class="byline">Editorial Board</p>
+          </header>
+          <p class="body-text">
+            As solar panel production shifts from East Asia to North Africa and
+            Latin America, the political map of energy dominance is being
+            redrawn faster than most governments have realised.
+          </p>
+        </article>
+
+        <article class="article">
+          <header>
+            <p class="kicker">Health</p>
+            <h2 class="headline hl-sm">
+              WHO Approves New Universal Flu Vaccine for Global Distribution
+            </h2>
+            <p class="byline">By K. Osei · Health Correspondent</p>
+          </header>
+          <p class="body-text">
+            A single-dose flu vaccine offering broad protection against all
+            known influenza strains has received WHO emergency approval and will
+            begin distribution in low-income countries next month.
+          </p>
+        </article>
+      </aside>
+    </main>
+
+    <!-- ── BOTTOM SECTIONS ── -->
+    <section class="bottom-grid" aria-label="Category Highlights">
+      <section class="bottom-col">
+        <h3 class="section-label">Sports</h3>
+        <article class="article">
+          <header>
+            <h4 class="headline hl-sm">
+              City Wins Champions Cup in Extra Time Thriller
+            </h4>
+            <p class="byline">By D. Kwame · Sports Desk</p>
+          </header>
+          <p class="body-text" style="font-size: 13px">
+            A last-minute header by striker L. Moreau sealed a 3-2 victory over
+            rivals United in a match that went to extra time at the Olympia
+            Stadium.
+          </p>
+        </article>
+      </section>
+
+      <section class="bottom-col">
+        <h3 class="section-label">Business</h3>
+        <article class="article">
+          <header>
+            <h4 class="headline hl-sm">
+              Tech Giant Reports Record $42B Quarterly Revenue
+            </h4>
+            <p class="byline">By P. Singh · Business Reporter</p>
+          </header>
+          <p class="body-text" style="font-size: 13px">
+            Shares climbed 8% after the company's cloud division posted its
+            strongest quarter on record, surpassing analyst estimates by a wide
+            margin.
+          </p>
+        </article>
+      </section>
+
+      <section class="bottom-col">
+        <h3 class="section-label">Arts & Culture</h3>
+        <article class="article">
+          <header>
+            <h4 class="headline hl-sm">
+              Film Festival Opens with Standing Ovation for Debut Director
+            </h4>
+            <p class="byline">By M. Lorentz · Arts Writer</p>
+          </header>
+          <p class="body-text" style="font-size: 13px">
+            The festival's opening night ended with the audience on its feet for
+            a debut feature from a 26-year-old filmmaker whose first film was
+            shot entirely on a mobile phone.
+          </p>
+        </article>
+      </section>
+
+      <section class="bottom-col">
+        <h3 class="section-label">Weather</h3>
+        <article class="article">
+          <header>
+            <h4 class="headline hl-sm">
+              Unseasonably Warm Week Ahead for Most of the Northeast
+            </h4>
+          </header>
+          <p class="body-text" style="font-size: 13px">
+            Temperatures are expected to climb 8°C above seasonal averages
+            through Friday, before a cold front brings showers over the weekend.
+            Full forecast on page C5.
+          </p>
+        </article>
+      </section>
+    </section>
+
+    <!-- ── PAPER FOOTER ── -->
+    <footer class="site-footer">
+      <div class="paper-footer">
+        Copyright © 2026 The Daily Times · All Rights Reserved · Founded 1884
+      </div>
+
+      <div class="am-credit">
+        Built by <a href="https://ahmosmusa.com" target="_blank">Ahmod Musa</a>
+        <span class="dot">•</span>
+        <a
+          href="https://www.fiverr.com/ahmodmusa/"
+          class="fiverr"
+          target="_blank"
+          >💼 Hire on Fiverr</a
+        >
+        <span class="dot">•</span>
+        <a href="https://ahmosmusa.com" target="_blank">🌐 ahmosmusa.com</a>
+        <span class="dot">•</span>
+        Premium UI Components
+      </div>
+    </footer>
+  </body>
+</html>

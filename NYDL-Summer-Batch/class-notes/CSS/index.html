@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS3 Basics — Teaching Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ NAV (fixed positioning demo) ============ -->
+  <nav class="site-nav">
+    <span class="logo">CSS3 Demo</span>
+    <ul class="nav-links">
+      <li><a href="#selectors">Selectors</a></li>
+      <li><a href="#box-model">Box Model</a></li>
+      <li><a href="#typography">Typography</a></li>
+      <li><a href="#backgrounds">Backgrounds</a></li>
+      <li><a href="#borders">Borders</a></li>
+      <li><a href="#positioning">Positioning</a></li>
+      <li><a href="#units">Units</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1>CSS3 Basics: Live Demo</h1>
+    <p>Every concept from the notes, shown on one page.</p>
+  </header>
+
+  <main>
+
+    <!-- ============ 1 & 2. RULESET + SELECTORS ============ -->
+    <section id="selectors" class="topic">
+      <h2>1 &amp; 2. Ruleset &amp; Selectors</h2>
+
+      <p id="unique-id">This paragraph is targeted by an <strong>ID selector</strong> (#unique-id).</p>
+
+      <p class="box">This is targeted by a <strong>class selector</strong> (.box).</p>
+      <p class="box">Classes are reusable — same class, same style.</p>
+
+      <div class="parent">
+        <p>I'm a direct child — hit by the <strong>child combinator</strong> (.parent &gt; p).</p>
+        <div>
+          <p>I'm a grandchild — only hit by the <strong>descendant combinator</strong> (.parent p), not the child one.</p>
+        </div>
+      </div>
+
+      <p class="sibling-demo">Adjacent sibling target:</p>
+      <p>I'm styled because I come right after .sibling-demo (+ combinator).</p>
+
+      <button class="hover-btn">Hover over me (:hover pseudo-class)</button>
+
+      <p class="quote-demo">Pseudo-elements add content before/after text without extra HTML.</p>
+    </section>
+
+    <!-- ============ 3. BOX MODEL ============ -->
+    <section id="box-model" class="topic">
+      <h2>3. Box Model</h2>
+      <p>Content → Padding → Border → Margin. Compare the two boxes below:</p>
+
+      <div class="box-demo content-box">
+        <p>content-box (default)<br>width = content only</p>
+      </div>
+
+      <div class="box-demo border-box">
+        <p>border-box<br>width includes padding + border</p>
+      </div>
+    </section>
+
+    <!-- ============ 4. TYPOGRAPHY ============ -->
+    <section id="typography" class="topic">
+      <h2>4. Typography</h2>
+      <h3 class="font-family-demo">font-family with fallback fonts</h3>
+      <p class="font-size-demo">font-size: 1.5rem — scales with the root font size.</p>
+      <p class="font-weight-demo">font-weight: 700 (bold) vs <span class="font-weight-normal">400 (normal)</span></p>
+      <p class="italic-demo">font-style: italic</p>
+      <p class="line-height-demo">
+        line-height controls the vertical space between lines of text, which matters a lot
+        for readability in long paragraphs like this one — try changing it live and watch
+        the spacing shift.
+      </p>
+      <p class="align-center">text-align: center</p>
+      <p class="decoration-demo">text-decoration: underline</p>
+      <p class="transform-demo">text-transform: uppercase (typed in lowercase)</p>
+    </section>
+
+    <!-- ============ 5. BACKGROUNDS ============ -->
+    <section id="backgrounds" class="topic">
+      <h2>5. Backgrounds</h2>
+      <div class="bg-color-demo">background-color</div>
+      <div class="bg-image-demo">background-image + background-size: cover</div>
+      <div class="bg-shorthand-demo">background shorthand (color + position + no-repeat)</div>
+    </section>
+
+    <!-- ============ 6. BORDERS ============ -->
+    <section id="borders" class="topic">
+      <h2>6. Borders</h2>
+      <div class="border-solid">border-style: solid</div>
+      <div class="border-dashed">border-style: dashed</div>
+      <div class="border-dotted">border-style: dotted</div>
+      <div class="border-radius-demo">border-radius (rounded corners)</div>
+    </section>
+
+    <!-- ============ 7. POSITIONING ============ -->
+    <section id="positioning" class="topic">
+      <h2>7. Positioning</h2>
+
+      <div class="position-static">static (default document flow)</div>
+
+      <div class="position-relative-wrapper">
+        relative wrapper (normal position)
+        <span class="position-relative-child">I'm relative, shifted from where I'd normally sit — the gap stays behind me.</span>
+      </div>
+
+      <div class="position-absolute-wrapper">
+        This wrapper is <code>position: relative</code>, so it becomes the anchor.
+        <span class="position-absolute-child">I'm absolute — positioned relative to my nearest positioned ancestor, removed from flow.</span>
+      </div>
+
+      <p class="z-index-note">Fixed demo: scroll down and watch the pink box in the corner — that's <code>position: fixed</code> with a high <code>z-index</code>.</p>
+      <div class="position-fixed-demo">fixed + z-index</div>
+    </section>
+
+    <!-- ============ 8. UNITS ============ -->
+    <section id="units" class="topic">
+      <h2>8. Units</h2>
+      <div class="unit-px">Width set in px (fixed, absolute)</div>
+      <div class="unit-percent-parent">
+        <div class="unit-percent-child">Width: 50% of parent</div>
+      </div>
+      <p class="unit-em">font-size in em (relative to parent font-size)</p>
+      <p class="unit-rem">font-size in rem (relative to root/html font-size)</p>
+      <div class="unit-vw">Width: 50vw (50% of viewport width)</div>
+      <div class="unit-vh">Height: 20vh (20% of viewport height)</div>
+    </section>
+
+    <!-- filler content so fixed positioning + scroll is visible -->
+    <section class="topic scroll-filler">
+      <h2>Scroll to see the fixed box stay put ↓</h2>
+      <p>Keep scrolling…</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 CSS3 Teaching Demo</p>
+  </footer>
+
+</body>
+</html>
